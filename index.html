@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script>
+    	if ('serviceWorker' in navigator) {
+    		window.addEventListener('load', function() {
+    			navigator.serviceWorker.register('/classicfootball/worker.js').then(function(registration) {
+    				console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    			}, function(err) {
+    				console.log('ServiceWorker registration failed: ', err);
+    			});
+    		});
+    	}
+  	</script>
+  	<meta name="theme-color" content="#001"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.json"/>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js"></script>
     <title>Space Game</title>
@@ -53,15 +68,15 @@
         </div>
       </div>
     </div>
-    <img style="display:none" id="shipImg" src="ship3.png">
-    <img style="display:none" id="shipBoostImg" src="ship3boost.png">
-    <img style="display:none" id="met1Img" src="meteors/meteor1.png">
-    <img style="display:none" id="met2Img" src="meteors/meteor2.png">
-    <img style="display:none" id="met3Img" src="meteors/meteor3.png">
-    <img style="display:none" id="met4Img" src="meteors/meteor4.png">
-    <img style="display:none" id="met5Img" src="meteors/meteor5.png">
-    <img style="display:none" id="met6Img" src="meteors/meteor6.png">
-    <img style="display:none" id="met7Img" src="meteors/meteor7.png">
+    <img style="display:none" height="100" width="100" id="shipImg" src="ship3.png">
+    <img style="display:none" height="100" width="100" id="shipBoostImg" src="ship3boost.png">
+    <img style="display:none" height="100" width="100" id="met1Img" src="meteors/meteor1.png">
+    <img style="display:none" height="100" width="100" id="met2Img" src="meteors/meteor2.png">
+    <img style="display:none" height="100" width="100" id="met3Img" src="meteors/meteor3.png">
+    <img style="display:none" height="100" width="100" id="met4Img" src="meteors/meteor4.png">
+    <img style="display:none" height="100" width="100" id="met5Img" src="meteors/meteor5.png">
+    <img style="display:none" height="100" width="100" id="met6Img" src="meteors/meteor6.png">
+    <img style="display:none" height="100" width="100" id="met7Img" src="meteors/meteor7.png">
     <audio style="display:none" id="audio" controls>
       <source src="soundtrack/StellarEngine.mp3" type="audio/mpeg">
     </audio>
